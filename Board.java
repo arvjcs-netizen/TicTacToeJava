@@ -117,7 +117,15 @@ public class Board {
         }else{
             return diagonal;
         }
-        return "none";
+        for (int i = 0; i < boardState.length; i++) {
+            for(int j = 0; j < boardState[i].length; j++) {
+                if(boardState[i][j].equals("E")){
+                    return "none";
+                }
+            }
+            
+        }
+        return "tie";
     }       
 
     @Override

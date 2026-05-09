@@ -11,8 +11,11 @@ public class Main {
             board.getMove();
             if ((board.check().equals("none"))){
 
-            }else{
+            }else if(!board.check().equals("tie")){
                 System.out.println("Player " + board.check() + " has won!");
+                break;
+            }else{
+                System.out.println("The game has ended in a tie.");
                 break;
             }
         }
